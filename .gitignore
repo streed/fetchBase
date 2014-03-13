@@ -4,3 +4,13 @@
 *.jar
 *.war
 *.ear
+
+bin/*
+
+*.swp
+*.swo
+*.swn
+.gradle
+build
+
+*.out

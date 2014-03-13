@@ -1,0 +1,15 @@
+version = "0.0.1"
+
+project( ":fetch-utils" ) {
+  dependencies {
+    compile 'org.apache.hadoop:hadoop-core:1.2.1'
+    compile 'org.apache.hbase:hbase-client:0.98.0-hadoop2'
+  }
+
+  jar {
+    manifest {
+      attributes( "Implementation-Title": "Fetch: HBase Utilities", 
+                  "Implementation-Version": version )
+    }
+  }
+}

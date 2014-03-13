@@ -1,0 +1,13 @@
+version = "0.0.1"
+
+project( ":fetch-annotations" ) {
+  dependencies {
+  }
+
+  jar {
+    manifest {
+      attributes( "Implementation-Title": "Fetch: HBase Annotations", 
+                  "Implementation-Version": version )
+    }
+  }
+}
