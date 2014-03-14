@@ -30,7 +30,8 @@ Table<Log> logsTable = new Table<Log>();
 
 Log log = parseStringIntoLog( logString );
 
-Result result = logsTable.add( log );//Defaults to the class annotated ColumnFamily "fetchBase" in this case.
+Result result = logsTable.add( log );//Defaults to the class annotated 
+                                     //ColumnFamily "fetchBase" in this case.
 
 if( result.successful() ) {
   System.out.println( "Successfully added log to HBase" );
