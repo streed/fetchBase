@@ -13,6 +13,13 @@ public class ColumnFamilyParser {
   public static Set<String> getColumnFamilies( Class klass ) throws FetchColumnFamilyException {
     Set<String> familyNames = new HashSet();
     if( klass.isAnnotationPresent( Table.class ) ) {
+      if( klass.isAnnotationPresent( ColumnFamily.class ) ) {
+        Annotation annotation = klass.getAnnotation( ColumnFamily.class );
+        ColumnFamily cf = (ColumnFamily)annotation;
+
+        familyNames.add( cf.family() );
+      }
+
       Field [] fields = klass.getDeclaredFields();
 
       for( Field f: fields ) {

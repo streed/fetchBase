@@ -20,11 +20,23 @@ public class TestColumnFamilyParser {
     int test2;
   }
 
+  @Table( name="test" )
+  @ColumnFamily( family="test" )
+  private class TestKlass2 {
+  }
+
   @Test
   public void test_that_the_two_column_families_are_returned_by_the_parser() throws FetchColumnFamilyException {
     Set<String> familyNames = ColumnFamilyParser.getColumnFamilies( TestKlass.class );
 
     assertTrue( familyNames.contains( "test" ) );
     assertTrue( familyNames.contains( "test2" ) );
+  }
+
+  @Test
+  public void test_that_the_class_annotated_has_correct_family_name() throws FetchColumnFamilyException {
+    Set<String> familyNames = ColumnFamilyParser.getColumnFamilies( TestKlass2.class );
+
+    assertTrue( familyNames.contains( "test" ) );
   }
 }
