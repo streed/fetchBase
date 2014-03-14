@@ -10,7 +10,7 @@ This library hopes to fullfill the following functionality as well as syntax:
 @ColumnFamily( family="fetchBase" )
 public class Log {
 
-  @Row( policy=FetchPolicy.REVERSE_TIMESTAMP )
+  @Row( policy=RowPolicy.REVERSE_TIMESTAMP )
   public Long timestamp;
   
   public String address;
