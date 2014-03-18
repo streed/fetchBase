@@ -2,6 +2,7 @@ version = "0.0.1"
 
 project( ":fetch-annotations" ) {
   dependencies {
+    compile 'commons-lang:commons-lang:2.3'
   }
 
   jar {
