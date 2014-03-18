@@ -1,6 +1,6 @@
-fetchBase
+fetchBase [![Build Status](https://travis-ci.org/streed/fetchBase.png?branch=master)](https://travis-ci.org/streed/fetchBase)
 =========
-[![Build Status](https://travis-ci.org/streed/fetchBase.png?branch=master)](https://travis-ci.org/streed/fetchBase)
+
 Utilities written to make HBase use easier.
 
 This library hopes to fullfill the following functionality as well as syntax:
